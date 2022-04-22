@@ -17,7 +17,7 @@ const userSchema = new Schema(
                 validator: function(v) {
                     return /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/(v);
                 },
-                message: notEmail => `${notEmail.value} is not a valid email!`
+                message: `Please enter a valid e-mail!`
             }
         },
         thoughts: [
