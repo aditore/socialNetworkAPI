@@ -8,7 +8,21 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
     },
     //get thoughts by _id
-
+    getSingleThought(req, res) {
+        Thought.findOne({ _id: req.params.thoughtId })
+            .select('-__v')
+            .then((thought) => 
+                !thought
+                    ? res.status(404).json({
+                        message: 'No thought found with this ID',
+                    })
+                    : res.status(200).json(thought)
+            )
+            .catch((err) => {
+                console.log(err);
+                res.status(500).json(err);
+            })
+    },
     //post thought through user _id
     createThought(req, res) {
         Thought.create(req.body)
@@ -30,9 +44,26 @@ module.exports = {
                 console.log(err);
                 res.status(500).json(err);
             })
-    }
+    },
     //update thought by _id
-
+    updateThought(req, res) {
+        Thought.findOneAndUpdate(
+            { _id: req.params.thoughtId },
+            { $set: req.body },
+            { runValidators: true, new: true }
+        )
+        .then((thought) => 
+            !thought
+                ? res.status(404).json({
+                    message: 'No thought found with this ID',
+                    })
+                    : res.status(200).json('Thought updated!')
+        )
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+    }
     //delete thought by _id
 
     /*new route*/
