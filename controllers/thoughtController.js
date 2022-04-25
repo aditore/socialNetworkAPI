@@ -26,7 +26,7 @@ module.exports = {
         Thought.create(req.body)
         .then((thought) => {
             return User.findOneAndUpdate(
-                { _id: req.body.userId },
+                { _id: req.params.userId },
                 { $addToSet: { thoughts: thought._id} },
                 { new: true }
             );
@@ -64,8 +64,13 @@ module.exports = {
         .then((thought) =>
             !thought
                 ? res.status(404).json({ message: 'No thought with that ID' })
-                : res.json({ message: 'Thoughts deleted!' })
+                : User.findOneAndUpdate(
+                    { thoughts: req.params.thoughtId },
+                    { $pull: { thoughts: req.params.thoughtId } },
+                    { runValidators: true, new: true }
+                  )
         )
+        .then(() => res.json({ message: 'Thought deleted and purged from User' }))
         .catch((err) => res.status(500).json(err));
     },
     /*new route*/
