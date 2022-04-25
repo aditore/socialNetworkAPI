@@ -64,10 +64,10 @@ module.exports = {
         .then((thought) =>
             !thought
                 ? res.status(404).json({ message: 'No thought with that ID' })
-                : res.json({ message: 'User and thoughts deleted!' })
+                : res.json({ message: 'Thoughts deleted!' })
         )
         .catch((err) => res.status(500).json(err));
-    }
+    },
     /*new route*/
     //post reaction
 
