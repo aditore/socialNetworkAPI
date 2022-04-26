@@ -2,6 +2,8 @@
 
 ## Description
 
+This app is a database that allows a developer to add Users to a database within MongoDB. The developer can also create thoughts with a relationship to the User schema as well as posting reactions to those thoughts. This app was developed to learn the basic aspects within MongoDB. The database can be used and seen as a basic social media workspace. I learned how to work within documents of MongoDB by using the npm 'Mongoose'. I also learned a new structure on how to produce routes while working with the schema I created.
+
 ## Table of Contents
 
 - [Description](#description)
@@ -10,6 +12,13 @@
 
 ## Installation
 
+Requires npm
+* express
+* mongoose
+
+Requires the database MongoDB
+
+Requires Insomnia or Postman to display routes
 
 ## Usage
 
