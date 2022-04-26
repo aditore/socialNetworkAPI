@@ -1,5 +1,5 @@
 const connection = require('../config/connection');
-const { User } = require('../models');
+const { User, Thought } = require('../models');
 const { getRandomName, getRandomEmail } = require('./data');
 
 connection.on('error', (err) => err);
@@ -9,6 +9,8 @@ connection.once('open', async () => {
 
     // Drop existing Users
     await User.deleteMany({});
+    // Drop existing Thoughts
+    await Thought.deleteMany({});
 
     // Create user
     const user = [];
