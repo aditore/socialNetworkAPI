@@ -22,8 +22,11 @@ Requires Insomnia or Postman to display routes
 
 ## Usage
 
-(VIDEO)
-`[![image_text](image)](google drive link)`
+(VIDEO) SEEDING and USER ROUTES DEMO
+[![seedUserRoute](./public/images/seedUserRoute.png)](https://drive.google.com/file/d/1yyuABZsfv292mNNI85hhvPKSgoZbK4E7/view)
+
+(VIDEO) THOUGHT ROUTES with REACTIONS DEMO
+[![thoughtRoute](./public/images/thoughtRoute.png)](https://drive.google.com/file/d/123_7UQVQZrj6IRaKcOjKT-Xv_CzZrI2C/view)
 
 ```
 GIVEN a social network API
