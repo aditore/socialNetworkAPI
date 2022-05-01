@@ -2,40 +2,59 @@
 
 ## Description
 
-This app is a database that allows a developer to add Users to a database within MongoDB. The developer can also create thoughts with a relationship to the User schema as well as posting reactions to those thoughts. This app was developed to learn the basic aspects within MongoDB. The database can be used and seen as a basic social media workspace. I learned how to work within documents of MongoDB by using the npm 'Mongoose'. I also learned a new structure on how to produce routes while working with the schema I created.
+This app is a database that allows a developer to add Users to a database within MongoDB. The developer can also create</br>
+thoughts with a relationship to the User schema as well as posting reactions to those thoughts. This app was developed</br>
+to learn the basic aspects of the npm mongoose MongoDB. The database can be used and seen as a basic social media workspace.</br>
+
+## Learned
+
+- Connect to MongoDB
+- Modify documents in MongoDB
+- Utilize mongoose
+- Create models and schema with mongoose
+- Create virtuals within schema
+- Seed data through mongoose
+- Export through controller
 
 ## Table of Contents
 
 - [Description](#description)
+- [Learned](#learned)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Credits](#credits)
+- [Features](#features)
 
 ## Installation
 
-Requires npm
-* express
-* mongoose
+NPM | Notes
+--- | ---
+express | Connection to locally hosted server
+mongoose | Connection to MongoDB and easier MongoDB code handling
 
-Requires the database MongoDB
-
-Requires Insomnia or Postman to display routes
+Database | Database name (required)
+--- | ---
+MongoDB | socialNetworkDB
 
 ## Usage
 
-(VIDEO) SEEDING and USER ROUTES DEMO
+After acquiring code and installing all dependencies, connect to and create database</br> 
+by running `cd utils node seed` within the terminal. The application needs data</br>
+to be able to view database properly. Run `node server` in the terminal from the root to activate</br>
+local host. Open postman or insomnia to use routes and use basic CRUD operations to manipulate the</br>
+database.</br>
+
+**(VIDEO)** _SEEDING and USER ROUTES DEMO_
 [![seedUserRoute](./public/images/seedUserRoute.png)](https://drive.google.com/file/d/1yyuABZsfv292mNNI85hhvPKSgoZbK4E7/view)
 
-(VIDEO) THOUGHT ROUTES with REACTIONS DEMO
+**(VIDEO)** _THOUGHT ROUTES with REACTIONS DEMO_
 [![thoughtRoute](./public/images/thoughtRoute.png)](https://drive.google.com/file/d/123_7UQVQZrj6IRaKcOjKT-Xv_CzZrI2C/view)
 
-```
-GIVEN a social network API
-WHEN I enter the command to invoke the application
-THEN my server is started and the Mongoose models are synced to the MongoDB database
-WHEN I open API GET routes in Insomnia for users and thoughts
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete users and thoughts in my database
-WHEN I test API POST and DELETE routes in Insomnia
-THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
-```
+## Credits
+
+Code by: Anthony Ditore</br>
+Github: [aditore](https://github.com/aditore)
+
+## Features
+
+- MongoDB database
