@@ -2,9 +2,12 @@
 
 ## Description
 
-This app is a database that allows a developer to add Users to a database within MongoDB. The developer can also create</br>
-thoughts with a relationship to the User schema as well as posting reactions to those thoughts. This app was developed</br>
-to learn the basic aspects of the npm mongoose MongoDB. The database can be used and seen as a basic social media workspace.</br>
+This app is a database that allows a developer to add Users</br>
+to a database within MongoDB. The developer can also create</br>
+thoughts with a relationship to the User schema as well as</br>
+posting reactions to those thoughts. This app was developed</br>
+to learn the basic aspects of the npm mongoose MongoDB. The</br>
+database can be used and seen as a basic social media workspace.</br>
 
 ## Learned
 
